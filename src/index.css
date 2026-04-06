@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .pt-safe { padding-top: env(safe-area-inset-top); }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  .pl-safe { padding-left: env(safe-area-inset-left); }
+  .pr-safe { padding-right: env(safe-area-inset-right); }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .markdown-body {
+    @apply text-sm leading-relaxed;
+  }
+  .markdown-body p {
+    @apply mb-2 last:mb-0;
+  }
+  .markdown-body a {
+    @apply text-blue-600 hover:underline;
+  }
+  .markdown-body ul {
+    @apply list-disc pl-4 mb-2;
+  }
+  .markdown-body ol {
+    @apply list-decimal pl-4 mb-2;
+  }
+  .markdown-body code {
+    @apply bg-gray-100 rounded px-1 py-0.5 font-mono text-xs text-gray-800;
+  }
+  .markdown-body pre {
+    @apply bg-gray-100 rounded p-2 mb-2 overflow-x-auto;
+  }
+  .markdown-body pre code {
+    @apply bg-transparent p-0;
+  }
+}

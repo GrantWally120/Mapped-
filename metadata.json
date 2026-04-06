@@ -1,0 +1,9 @@
+{
+  "name": "Mapped",
+  "description": "An AI-powered map and exploration assistant using Google Search, Google Maps, and Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
